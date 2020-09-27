@@ -33,12 +33,11 @@ prayerForm:author
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-    PREFIX bif: <http://www.openlinksw.com/schemas/bif>
 
     SELECT * WHERE {
       ?sub a foaf:Person .
       ?sub rdfs:label ?lbl .
-      ?lbl bif:contains "%search%" .
+      filter( regex(?lbl, "Lewis" ))
       filter(langMatches(lang(?lbl), "en"))
     }
     LIMIT 100
