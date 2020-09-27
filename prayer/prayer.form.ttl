@@ -37,7 +37,7 @@ prayerForm:author
     SELECT * WHERE {
       ?sub a foaf:Person .
       ?sub rdfs:label ?lbl .
-      filter( regex(?lbl, "Lewis" ))
+      filter( regex(?lbl, "%search%" ))
       filter(langMatches(lang(?lbl), "en"))
     }
     LIMIT 100
