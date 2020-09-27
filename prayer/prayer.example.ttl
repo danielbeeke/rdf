@@ -20,7 +20,7 @@ Strengthen me, O Holy Spirit, to defend all that is holy.
 Guard me, then, O Holy Spirit, that I always may be holy.
     """ ;
     prayer:author <http://dbpedia.org/page/Augustine_of_Hippo> ;
-    prayer:dateCreated "398 A.D." .
+    prayer:dateCreated "398" .
 
 prayerExample:UnchangeableSorenKierkgaard
     a prayer:Prayer ;

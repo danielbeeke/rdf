@@ -19,13 +19,13 @@ prayer:Prayer
     a            rdfs:Class ;
     rdfs:label   "Prayer"@en ;
     rdfs:comment "A written Christian prayer."@en ;
-    form:Form   <http://rdf.danielbeeke.nl/prayer/prayer.form.ttl> .
+    form:Form    <http://rdf.danielbeeke.nl/prayer/prayer.form.ttl> .
 
 prayer:author
-    rdf:type                rdf:Property ;
-    rdfs:comment            "A person or group who created a prayer."@en ;
-    rdfs:label              "Author"@en ;
-    owl:sameAs              <http://www.schema.org/Person> .
+    rdf:type     rdf:Property ;
+    rdfs:comment "A person or group who created a prayer."@en ;
+    rdfs:label   "Author"@en ;
+    owl:sameAs   <http://www.schema.org/Person> .
 
 prayer:title
     rdf:type     rdf:Property ;
