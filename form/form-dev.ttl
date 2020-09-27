@@ -1,0 +1,53 @@
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix form:  <http://rdf.danielbeeke.nl/form/form-dev.ttl#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann:    <http://purl.org/vocab/vann/> .
+
+form:
+    rdf:type                      owl:Ontology ;
+    dcterms:title                 "Form ontology"@en ;
+    dcterms:description           "An ontology for adding form definitions to Ontologies."@en ;
+    vann:preferredNamespacePrefix "form" ;
+    vann:preferredNamespaceURI    <http://w3id.org/form/> .
+
+form:Form
+    a            rdfs:Class ;
+    rdfs:label   "Form"@en ;
+    rdfs:comment "A form definition for an owl class."@en .
+
+form:fieldType
+    rdf:type     rdf:Property ;
+    rdfs:comment "The field type"@en ;
+    rdfs:label   "Field type"@en .
+
+form:order
+    rdf:type     rdf:Property ;
+    rdfs:comment "The position of the field in the form"@en ;
+    rdfs:label   "Order"@en .
+
+form:required
+    rdf:type     rdf:Property ;
+    rdfs:comment "The minimum items that are required or true for single fields"@en ;
+    rdfs:label   "Required"@en .
+
+form:multiple
+    rdf:type     rdf:Property ;
+    rdfs:comment "This field may have multiple items"@en ;
+    rdfs:label   "Multiple"@en .
+
+form:disabled
+    rdf:type     rdf:Property ;
+    rdfs:comment "This field is disabled"@en ;
+    rdfs:label   "Disabled"@en .
+
+form:disabled
+    rdf:type     rdf:Property ;
+    rdfs:comment "This field is disabled"@en ;
+    rdfs:label   "Disabled"@en .
+
+form:binding
+    rdf:type     rdf:Property ;
+    rdfs:comment "The predicate(s) this field maps to"@en ;
+    rdfs:label   "Binding(s)"@en .

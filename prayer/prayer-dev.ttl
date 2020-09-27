@@ -1,0 +1,71 @@
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prayer:  <http://rdf.danielbeeke.nl/prayer/prayer-dev.ttl#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann:    <http://purl.org/vocab/vann/> .
+@prefix form:    <http://rdf.danielbeeke.nl/form/form-dev.ttl#> .
+
+prayer:
+    rdf:type                      owl:Ontology ;
+    dcterms:title                 "Prayer ontology"@en ;
+    dcterms:description           """
+    An ontology for written Christian prayers
+    """@en ;
+    vann:preferredNamespacePrefix "prayer" ;
+    vann:preferredNamespaceURI    <http://w3id.org/prayer/> .
+
+prayer:Prayer
+    a            rdfs:Class ;
+    rdfs:label   "Prayer"@en ;
+    rdfs:comment "A written Christian prayer."@en ;
+    form:Form   <http://rdf.danielbeeke.nl/prayer/prayer.form.ttl> .
+
+prayer:author
+    rdf:type                rdf:Property ;
+    rdfs:comment            "A person or group who created a prayer."@en ;
+    rdfs:label              "Author"@en ;
+    form:autocompleteSource "http://dbpedia.org/sparql" ;
+    form:autocompleteQuery  """
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    SELECT * WHERE {
+      ?sub a foaf:Person .
+      ?sub rdfs:label ?lbl .
+      ?lbl bif:contains "%search%" .
+      filter(langMatches(lang(?lbl), "en"))
+    }
+    LIMIT 100
+    """ ;
+    form:fieldType          "string" ;
+    owl:sameAs              <http://www.schema.org/Person> .
+
+prayer:title
+    rdf:type     rdf:Property ;
+    rdfs:comment "The prayer title."@en ;
+    rdfs:label   "Prayer title"@en ;
+    owl:sameAs   rdfs:label .
+
+prayer:content
+    rdf:type     rdf:Property ;
+    rdfs:comment "The prayer text itself."@en ;
+    rdfs:label   "Prayer text"@en ;
+    owl:sameAs   <http://www.schema.org/text> .
+
+prayer:category
+    rdf:type     rdf:Property ;
+    rdfs:comment "The category of the prayer."@en ;
+    rdfs:label   "Category"@en .
+
+prayer:dateCreated
+    rdf:type     rdf:Property ;
+    rdfs:comment "The creation date of the prayer."@en ;
+    rdfs:label   "Creation date"@en ;
+    owl:sameAs   <http://www.schema.org/dateCreated> .
+
+prayer:originalLanguage
+    rdf:type     rdf:Property ;
+    rdfs:comment "The language the prayer was first prayed in."@en ;
+    rdfs:label   "Original language"@en ;
+    owl:sameAs   <http://www.schema.org/inLanguage> .

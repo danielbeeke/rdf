@@ -1,0 +1,56 @@
+@prefix rdf:           <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:          <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prayer:        <http://rdf.danielbeeke.nl/prayer/prayer-dev.ttl#> .
+@prefix owl:           <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms:       <http://purl.org/dc/terms/> .
+@prefix vann:          <http://purl.org/vocab/vann/> .
+@prefix form:          <http://rdf.danielbeeke.nl/form/form-dev.ttl#> .
+@prefix prayerExample: <http://rdf.danielbeeke.nl/prayer/prayer.example.ttl#> .
+
+prayerExample:PrayerForThePowerOfTheHolySpiritSaintAugustineOfHippo
+    a prayer:Prayer ;
+    prayer:title "Prayer for the Power of the Holy Spirit"@en ;
+    prayer:content """
+O Holy Spirit, descend plentifully into my heart.
+Enlighten the dark corners of this neglected dwelling and scatter there Your cheerful beams.
+Breathe in me, O Holy Spirit, that my thoughts may all be holy.
+Act in me, O Holy Spirit, that my work, too, may be holy.
+Draw my heart, O Holy Spirit, that I love but what is holy.
+Strengthen me, O Holy Spirit, to defend all that is holy.
+Guard me, then, O Holy Spirit, that I always may be holy.
+    """ ;
+    prayer:author <http://dbpedia.org/page/Augustine_of_Hippo> ;
+    prayer:dateCreated "398 A.D." .
+
+prayerExample:UnchangeableSorenKierkgaard
+    a prayer:Prayer ;
+    prayer:title "Unchangeable"@en ;
+    prayer:content """
+You who are unchangeable, whom nothing changes!
+You who are unchangeable in love, precisely for our welfare,
+not submitting to any change:
+may we too will our welfare,
+submitting ourselves to the discipline of Your unchangeableness,
+so that we may in unconditional obedience find our rest
+and remain at rest in Your unchangeableness.
+
+You are not like us;
+if we are to preserve only some degree of constancy,
+we must not permit ourselves too much to be moved,
+nor by too many things.
+
+You on the contrary are moved,
+and moved in infinite love, by all things.
+Even that which we humans beings call an insignificant trifle, and pass by unmoved,
+the need of a sparrow, even this moved You;
+and what we so often scarcely notice,
+a human sigh, this moves You,
+You who are unchangeable!
+
+You who in infinite love is moved,
+may this our prayer also move You to add Your blessing,
+in order that there may be brought about such a change in us who pray
+as to bring us into conformity with Your unchangeable will,
+You who are unchangeable!
+    """ ;
+    prayer:author <http://dbpedia.org/page/S%C3%B8ren_Kierkegaard> .

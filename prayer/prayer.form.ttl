@@ -1,0 +1,24 @@
+@prefix rdf:        <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prayer:     <http://rdf.danielbeeke.nl/prayer/prayer-dev.ttl#> .
+@prefix owl:        <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms:    <http://purl.org/dc/terms/> .
+@prefix vann:       <http://purl.org/vocab/vann/> .
+@prefix form:       <http://rdf.danielbeeke.nl/form/form-dev.ttl#> .
+@prefix prayerForm: <http://rdf.danielbeeke.nl/prayer/prayer.form.ttl#> .
+
+prayerForm:title
+    form:fieldType "string" ;
+    rdfs:label     "Title"@en ;
+    rdfs:label     "Titel"@nl ;
+    form:binding   prayer:title ;
+    form:order     1 ;
+    form:required  true .
+
+prayerForm:prayer
+    form:fieldType "textarea" ;
+    rdfs:label     "Prayer"@en ;
+    rdfs:label     "Gebed"@nl ;
+    form:binding   prayer:content ;
+    form:order     2 ;
+    form:required  true .
