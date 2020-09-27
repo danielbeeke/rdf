@@ -22,3 +22,23 @@ prayerForm:prayer
     form:binding   prayer:content ;
     form:order     2 ;
     form:required  true .
+
+prayerForm:author
+    form:fieldType "string" ;
+    rdfs:label     "Author"@en ;
+    rdfs:label     "Auteur"@nl ;
+    form:binding   prayer:author ;
+    form:autocompleteSource "http://dbpedia.org/sparql" ;
+    form:autocompleteQuery  """
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    SELECT * WHERE {
+      ?sub a foaf:Person .
+      ?sub rdfs:label ?lbl .
+      ?lbl bif:contains "%search%" .
+      filter(langMatches(lang(?lbl), "en"))
+    }
+    LIMIT 100
+    """ ;
+    form:order     3 .

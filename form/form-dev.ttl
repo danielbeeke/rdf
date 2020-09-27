@@ -51,3 +51,13 @@ form:binding
     rdf:type     rdf:Property ;
     rdfs:comment "The predicate(s) this field maps to"@en ;
     rdfs:label   "Binding(s)"@en .
+
+form:autocompleteSource
+    rdf:type     rdf:Property ;
+    rdfs:comment "The source the autocomplete query must be executed on"@en ;
+    rdfs:label   "Autocomplete source"@en .
+
+form:autocompleteQuery
+    rdf:type     rdf:Property ;
+    rdfs:comment "The query for the autocomplete"@en ;
+    rdfs:label   "Autocomplete query"@en .

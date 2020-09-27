@@ -25,20 +25,6 @@ prayer:author
     rdf:type                rdf:Property ;
     rdfs:comment            "A person or group who created a prayer."@en ;
     rdfs:label              "Author"@en ;
-    form:autocompleteSource "http://dbpedia.org/sparql" ;
-    form:autocompleteQuery  """
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-    SELECT * WHERE {
-      ?sub a foaf:Person .
-      ?sub rdfs:label ?lbl .
-      ?lbl bif:contains "%search%" .
-      filter(langMatches(lang(?lbl), "en"))
-    }
-    LIMIT 100
-    """ ;
-    form:fieldType          "string" ;
     owl:sameAs              <http://www.schema.org/Person> .
 
 prayer:title
