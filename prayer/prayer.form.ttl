@@ -1,45 +1,51 @@
-@prefix rdf:        <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix prayer:     <http://rdf.danielbeeke.nl/prayer/prayer-dev.ttl#> .
-@prefix owl:        <http://www.w3.org/2002/07/owl#> .
-@prefix dcterms:    <http://purl.org/dc/terms/> .
-@prefix vann:       <http://purl.org/vocab/vann/> .
-@prefix form:       <http://rdf.danielbeeke.nl/form/form-dev.ttl#> .
-@prefix prayerForm: <http://rdf.danielbeeke.nl/prayer/prayer.form.ttl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prayer:  <http://rdf.danielbeeke.nl/prayer/prayer-dev.ttl#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann:    <http://purl.org/vocab/vann/> .
+@prefix form:    <http://rdf.danielbeeke.nl/form/form-dev.ttl#> .
 
-prayerForm:title
-    form:fieldType "string" ;
-    rdfs:label     "Title"@en ;
-    rdfs:label     "Titel"@nl ;
-    form:binding   prayer:title ;
-    form:order     1 ;
-    form:required  true .
+@base            <http://rdf.danielbeeke.nl/prayer/prayer.form.ttl#> .
 
-prayerForm:prayer
-    form:fieldType "textarea" ;
-    rdfs:label     "Prayer"@en ;
-    rdfs:label     "Gebed"@nl ;
-    form:binding   prayer:content ;
-    form:order     2 ;
-    form:required  true .
+<subject>
+    form:fieldWidget "subject" ;
+    rdfs:label       "Machine name"@en ;
+    rdfs:label       "Machinenaam"@nl ;
+    form:binding     prayer:title ;
+    form:order       0 .
 
-prayerForm:author
-    form:fieldType "string" ;
-    rdfs:label     "Author"@en ;
-    rdfs:label     "Auteur"@nl ;
-    form:binding   prayer:author ;
-    form:autocompleteSource "http://dbpedia.org/sparql" ;
-    form:autocompleteQuery  """
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+<title>
+    form:fieldWidget  "string" ;
+    rdfs:label        "Title"@en ;
+    rdfs:label        "Titel"@nl ;
+    form:binding      prayer:title ;
+    form:order        1 ;
+    form:translatable true ;
+    form:required     true .
 
-    SELECT * WHERE {
-      ?sub a foaf:Person .
-      ?sub rdfs:label ?lbl .
-      filter( regex(?lbl, "%search%" ))
-      filter(langMatches(lang(?lbl), "en"))
-    }
-    LIMIT 100
-    """ ;
-    form:order     3 .
+<category>
+    form:fieldWidget "string" ;
+    rdfs:label       "Category"@en ;
+    rdfs:label       "Categorie"@nl ;
+    form:binding     prayer:category ;
+    form:multiple    true ;
+    form:order       2 .
+
+<prayer>
+    form:fieldWidget  "textarea" ;
+    rdfs:label        "Prayer"@en ;
+    rdfs:label        "Gebed"@nl ;
+    form:binding      prayer:content ;
+    form:rows         6 ;
+    form:order        3 ;
+    form:translatable true ;
+    form:required     true .
+
+<author>
+    form:fieldWidget  "reference" ;
+    rdfs:label        "Author"@en ;
+    rdfs:label        "Auteur"@nl ;
+    form:binding      prayer:author ;
+    form:translatable true ;
+    form:order        4 .

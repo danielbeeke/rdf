@@ -17,10 +17,10 @@ form:Form
     rdfs:label   "Form"@en ;
     rdfs:comment "A form definition for an owl class."@en .
 
-form:fieldType
+form:fieldWidget
     rdf:type     rdf:Property ;
-    rdfs:comment "The field type"@en ;
-    rdfs:label   "Field type"@en .
+    rdfs:comment "The field widget"@en ;
+    rdfs:label   "Field widget"@en .
 
 form:order
     rdf:type     rdf:Property ;
@@ -42,6 +42,11 @@ form:disabled
     rdfs:comment "This field is disabled"@en ;
     rdfs:label   "Disabled"@en .
 
+form:rows
+    rdf:type     rdf:Property ;
+    rdfs:comment "The rows for a textarea"@en ;
+    rdfs:label   "Rows"@en .
+
 form:disabled
     rdf:type     rdf:Property ;
     rdfs:comment "This field is disabled"@en ;
@@ -52,12 +57,12 @@ form:binding
     rdfs:comment "The predicate(s) this field maps to"@en ;
     rdfs:label   "Binding(s)"@en .
 
-form:autocompleteSource
+form:translatable
     rdf:type     rdf:Property ;
-    rdfs:comment "The source the autocomplete query must be executed on"@en ;
-    rdfs:label   "Autocomplete source"@en .
+    rdfs:comment "If the field is translatable"@en ;
+    rdfs:label   "Translatable"@en .
 
-form:autocompleteQuery
+form:subject
     rdf:type     rdf:Property ;
-    rdfs:comment "The query for the autocomplete"@en ;
-    rdfs:label   "Autocomplete query"@en .
+    rdfs:comment "If you use this property, the form builder should use the value of this field as the name of the subject that is created"@en ;
+    rdfs:label   "Subject creator"@en .
