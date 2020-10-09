@@ -6,14 +6,16 @@
 @prefix vann:    <http://purl.org/vocab/vann/> .
 @prefix form:    <http://rdf.danielbeeke.nl/form/form-dev.ttl#> .
 
-<http://rdf.danielbeeke.nl/prayer/prayer.form.ttl#subject>
+@base            <http://rdf.danielbeeke.nl/prayer/prayer.form.ttl> .
+
+<#subject>
     form:fieldWidget "subject" ;
     rdfs:label       "Machine name"@en ;
     rdfs:label       "Machinenaam"@nl ;
     form:binding     prayer:title ;
     form:order       0 .
 
-<http://rdf.danielbeeke.nl/prayer/prayer.form.ttl#title>
+<#title>
     form:fieldWidget  "string" ;
     rdfs:label        "Title"@en ;
     rdfs:label        "Titel"@nl ;
@@ -22,7 +24,7 @@
     form:translatable true ;
     form:required     true .
 
-<http://rdf.danielbeeke.nl/prayer/prayer.form.ttl#category>
+<#category>
     form:fieldWidget "string" ;
     rdfs:label       "Category"@en ;
     rdfs:label       "Categorie"@nl ;
@@ -30,7 +32,7 @@
     form:multiple    true ;
     form:order       2 .
 
-<http://rdf.danielbeeke.nl/prayer/prayer.form.ttl#prayer>
+<#prayer>
     form:fieldWidget  "textarea" ;
     rdfs:label        "Prayer"@en ;
     rdfs:label        "Gebed"@nl ;
@@ -40,7 +42,7 @@
     form:translatable true ;
     form:required     true .
 
-<http://rdf.danielbeeke.nl/prayer/prayer.form.ttl#author>
+<#author>
     form:fieldWidget  "reference" ;
     rdfs:label        "Author"@en ;
     rdfs:label        "Auteur"@nl ;
