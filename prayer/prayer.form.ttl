@@ -11,7 +11,7 @@ prayerForm:subject
     form:fieldWidget "subject" ;
     rdfs:label       "Machine name"@en ;
     rdfs:label       "Machinenaam"@nl ;
-    form:binding     prayer:title ;
+    form:input       prayer:title ;
     form:order       0 .
 
 prayerForm:title
@@ -42,8 +42,8 @@ prayerForm:prayer
     form:required     true .
 
 prayerForm:author
-    form:fieldWidget  "reference" ;
-    rdfs:label        "Author"@en ;
-    rdfs:label        "Auteur"@nl ;
-    form:binding      prayer:author ;
-    form:order        4 .
+    form:fieldWidget "reference" ;
+    rdfs:label       "Author"@en ;
+    rdfs:label       "Auteur"@nl ;
+    form:binding     prayer:author ;
+    form:order       4 .

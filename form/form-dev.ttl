@@ -57,6 +57,11 @@ form:binding
     rdfs:comment "The predicate(s) this field maps to"@en ;
     rdfs:label   "Binding(s)"@en .
 
+form:input
+    rdf:type     rdf:Property ;
+    rdfs:comment "The input for the subject field"@en ;
+    rdfs:label   "Subject input"@en .
+
 form:translatable
     rdf:type     rdf:Property ;
     rdfs:comment "If the field is translatable"@en ;
