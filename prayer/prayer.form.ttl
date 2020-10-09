@@ -7,16 +7,14 @@
 @prefix form:       <http://rdf.danielbeeke.nl/form/form-dev.ttl#> .
 @prefix prayerForm: <http://rdf.danielbeeke.nl/prayer/prayer.form.ttl#> .
 
-@base               <http://rdf.danielbeeke.nl/prayer/prayer.form.ttl> .
-
-<#subject>
+prayerForm:subject
     form:fieldWidget "subject" ;
     rdfs:label       "Machine name"@en ;
     rdfs:label       "Machinenaam"@nl ;
     form:binding     prayer:title ;
     form:order       0 .
 
-<#title>
+prayerForm:title
     form:fieldWidget  "string" ;
     rdfs:label        "Title"@en ;
     rdfs:label        "Titel"@nl ;
@@ -25,7 +23,7 @@
     form:translatable true ;
     form:required     true .
 
-<#category>
+prayerForm:category
     form:fieldWidget "string" ;
     rdfs:label       "Category"@en ;
     rdfs:label       "Categorie"@nl ;
@@ -33,7 +31,7 @@
     form:multiple    true ;
     form:order       2 .
 
-<#prayer>
+prayerForm:prayer
     form:fieldWidget  "textarea" ;
     rdfs:label        "Prayer"@en ;
     rdfs:label        "Gebed"@nl ;
@@ -43,7 +41,7 @@
     form:translatable true ;
     form:required     true .
 
-<#author>
+prayerForm:author
     form:fieldWidget  "reference" ;
     rdfs:label        "Author"@en ;
     rdfs:label        "Auteur"@nl ;
