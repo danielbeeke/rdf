@@ -46,5 +46,4 @@ prayerForm:author
     rdfs:label        "Author"@en ;
     rdfs:label        "Auteur"@nl ;
     form:binding      prayer:author ;
-    form:translatable true ;
     form:order        4 .
