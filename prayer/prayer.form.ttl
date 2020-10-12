@@ -24,7 +24,7 @@ prayerForm:title
     form:required     true .
 
 prayerForm:category
-    form:fieldWidget "string" ;
+    form:fieldWidget "reference" ;
     rdfs:label       "Category"@en ;
     rdfs:label       "Categorie"@nl ;
     form:binding     prayer:category ;
