@@ -4,6 +4,7 @@
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix vann:    <http://purl.org/vocab/vann/> .
+@prefix schema:  <http://schema.org/> .
 @prefix form:    <http://rdf.danielbeeke.nl/form/form-dev.ttl#> .
 
 prayer:
@@ -19,13 +20,14 @@ prayer:Prayer
     a            rdfs:Class ;
     rdfs:label   "Prayer"@en ;
     rdfs:comment "A written Christian prayer."@en ;
+    rdf:type        owl:Thing, rdfs:Resource, schema:Text ;
     form:Form    <http://rdf.danielbeeke.nl/prayer/prayer.form.ttl> .
 
 prayer:author
     rdf:type     rdf:Property ;
     rdfs:comment "A person or group who created a prayer."@en ;
     rdfs:label   "Author"@en ;
-    owl:sameAs   <http://www.schema.org/Person> .
+    owl:sameAs   schema:Person .
 
 prayer:title
     rdf:type     rdf:Property ;
@@ -37,7 +39,7 @@ prayer:content
     rdf:type     rdf:Property ;
     rdfs:comment "The prayer text itself."@en ;
     rdfs:label   "Prayer text"@en ;
-    owl:sameAs   <http://www.schema.org/text> .
+    owl:sameAs   schema:text .
 
 prayer:category
     rdf:type     rdf:Property ;
@@ -48,10 +50,25 @@ prayer:dateCreated
     rdf:type     rdf:Property ;
     rdfs:comment "The creation date of the prayer."@en ;
     rdfs:label   "Creation date"@en ;
-    owl:sameAs   <http://www.schema.org/dateCreated> .
+    owl:sameAs   schema:dateCreated .
 
 prayer:originalLanguage
     rdf:type     rdf:Property ;
     rdfs:comment "The language the prayer was first prayed in."@en ;
     rdfs:label   "Original language"@en ;
-    owl:sameAs   <http://www.schema.org/inLanguage> .
+    owl:sameAs   schema:inLanguage .
+
+prayer:MorningPrayer
+    rdfs:label   "Morning prayer"@en ;
+    rdfs:comment "A Christian prayer usually prayed in the morning."@en ;
+    rdfs:subClassOf prayer:Prayer .
+
+prayer:EveningPrayer
+    rdfs:label   "Evening prayer"@en ;
+    rdfs:comment "A Christian prayer usually prayed in the evening."@en ;
+    rdfs:subClassOf prayer:Prayer .
+
+prayer:MealPrayer
+    rdfs:label   "Morning prayer"@en ;
+    rdfs:comment "A Christian prayer usually prayed before or after a meal."@en ;
+    rdfs:subClassOf prayer:Prayer .

@@ -67,6 +67,16 @@ form:translatable
     rdfs:comment "If the field is translatable"@en ;
     rdfs:label   "Translatable"@en .
 
+form:autoCompleteSource
+    rdf:type     rdf:Property ;
+    rdfs:comment "A source of autocomplete suggestions"@en ;
+    rdfs:label   "Autocomplete source"@en .
+
+form:autoCompleteQuery
+    rdf:type     rdf:Property ;
+    rdfs:comment "Sparql query for autocomplete suggestions"@en ;
+    rdfs:label   "Query"@en .
+
 form:subject
     rdf:type     rdf:Property ;
     rdfs:comment "If you use this property, the form builder should use the value of this field as the name of the subject that is created"@en ;

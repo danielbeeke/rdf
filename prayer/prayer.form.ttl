@@ -29,6 +29,12 @@ prayerForm:category
     rdfs:label       "Categorie"@nl ;
     form:binding     prayer:category ;
     form:multiple    true ;
+    form:autoCompleteSource <http://rdf.danielbeeke.nl/prayer/prayer-dev.ttl> ;
+    form:autoCompleteQuery """
+    SELECT * {
+        prayer:Prayer rdfs:subClassOf ?subject .
+    }
+    """ ;
     form:order       2 .
 
 prayerForm:prayer
