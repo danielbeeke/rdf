@@ -19,7 +19,7 @@ Draw my heart, O Holy Spirit, that I love but what is holy.
 Strengthen me, O Holy Spirit, to defend all that is holy.
 Guard me, then, O Holy Spirit, that I always may be holy.
     """ ;
-    prayer:author <http://dbpedia.org/page/Augustine_of_Hippo> ;
+    prayer:author <http://dbpedia.org/resource/Augustine_of_Hippo> ;
     prayer:dateCreated "398" .
 
 prayerExample:UnchangeableSorenKierkgaard
@@ -53,4 +53,4 @@ in order that there may be brought about such a change in us who pray
 as to bring us into conformity with Your unchangeable will,
 You who are unchangeable!
     """ ;
-    prayer:author <http://dbpedia.org/page/S%C3%B8ren_Kierkegaard> .
+    prayer:author <http://dbpedia.org/resource/S%C3%B8ren_Kierkegaard> .
