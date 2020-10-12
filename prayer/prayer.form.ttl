@@ -31,6 +31,9 @@ prayerForm:category
     form:multiple    true ;
     form:autoCompleteSource <http://rdf.danielbeeke.nl/prayer/prayer-dev.ttl> ;
     form:autoCompleteQuery """
+    PREFIX prayer:     <http://rdf.danielbeeke.nl/prayer/prayer-dev.ttl#> .
+    PREFIX rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+
     SELECT * {
         prayer:Prayer rdfs:subClassOf ?subject .
     }
