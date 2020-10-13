@@ -69,6 +69,6 @@ prayer:EveningPrayer
     rdfs:subClassOf prayer:Prayer .
 
 prayer:MealPrayer
-    rdfs:label   "Morning prayer"@en ;
+    rdfs:label   "Meal prayer"@en ;
     rdfs:comment "A Christian prayer usually prayed before or after a meal."@en ;
     rdfs:subClassOf prayer:Prayer .
