@@ -1,0 +1,59 @@
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix recipe:  <http://rdf.danielbeeke.nl/recipe/recipe-dev.ttl#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann:    <http://purl.org/vocab/vann/> .
+@prefix schema:  <http://schema.org/> .
+@prefix form:    <http://rdf.danielbeeke.nl/form/form-dev.ttl#> .
+
+recipe:
+    rdf:type                      owl:Ontology ;
+    dcterms:title                 "Recipe ontology"@en ;
+    dcterms:description           """
+    An ontology for recipes
+    """@en ;
+    vann:preferredNamespacePrefix "recipe" ;
+    vann:preferredNamespaceURI    <http://w3id.org/recipe/> .
+
+recipe:Recipe
+    a            rdfs:Class ;
+    rdfs:label   "Recipe"@en ;
+    rdfs:comment "A recipe."@en ;
+    rdf:type        owl:Thing, rdfs:Resource, schema:Text ;
+    form:Form    <http://rdf.danielbeeke.nl/recipe/recipe.form.ttl> .
+
+recipe:author
+    rdf:type     rdf:Property ;
+    rdfs:comment "A person or group who created a recipe."@en ;
+    rdfs:label   "Author"@en ;
+    owl:sameAs   schema:Person .
+
+recipe:title
+    rdf:type     rdf:Property ;
+    rdfs:comment "The recipe title."@en ;
+    rdfs:label   "Recipe title"@en ;
+    owl:sameAs   rdfs:label .
+
+recipe:content
+    rdf:type     rdf:Property ;
+    rdfs:comment "The recipe text itself."@en ;
+    rdfs:label   "Recipe text"@en ;
+    owl:sameAs   schema:text .
+
+recipe:category
+    rdf:type     rdf:Property ;
+    rdfs:comment "The category of the recipe."@en ;
+    rdfs:label   "Category"@en .
+
+recipe:dateCreated
+    rdf:type     rdf:Property ;
+    rdfs:comment "The creation date of the recipe."@en ;
+    rdfs:label   "Creation date"@en ;
+    owl:sameAs   schema:dateCreated .
+
+recipe:originalLanguage
+    rdf:type     rdf:Property ;
+    rdfs:comment "The language the recipe was first prayed in."@en ;
+    rdfs:label   "Original language"@en ;
+    owl:sameAs   schema:inLanguage .
