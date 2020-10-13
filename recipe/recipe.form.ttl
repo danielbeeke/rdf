@@ -1,33 +1,26 @@
 @prefix rdf:        <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix recipe:     <http://rdf.danielbeeke.nl/recipe/recipe-dev.ttl#> .
+@prefix recipe:     <http://purl.org/arecipe/> .
 @prefix owl:        <http://www.w3.org/2002/07/owl#> .
 @prefix dcterms:    <http://purl.org/dc/terms/> .
 @prefix vann:       <http://purl.org/vocab/vann/> .
 @prefix form:       <http://rdf.danielbeeke.nl/form/form-dev.ttl#> .
 @prefix recipeForm: <http://rdf.danielbeeke.nl/recipe/recipe.form.ttl#> .
 
-recipeForm:subject
-    form:fieldWidget "subject" ;
-    rdfs:label       "Machine name"@en ;
-    rdfs:label       "Machinenaam"@nl ;
-    form:input       recipe:title ;
-    form:order       0 .
-
-recipeForm:title
+recipeForm:fn
     form:fieldWidget  "string" ;
     rdfs:label        "Title"@en ;
     rdfs:label        "Titel"@nl ;
-    form:binding      recipe:title ;
+    form:binding      recipe:fn ;
     form:order        1 ;
     form:translatable true ;
     form:required     true .
 
-recipeForm:category
+recipeForm:ingredient
     form:fieldWidget "reference" ;
-    rdfs:label       "Category"@en ;
-    rdfs:label       "Categorie"@nl ;
-    form:binding     recipe:category ;
+    rdfs:label       "Ingredients"@en ;
+    rdfs:label       "Ingrediënten"@nl ;
+    form:binding     recipe:ingredient ;
     form:multiple    true ;
     form:autoCompleteSource "http://rdf.danielbeeke.nl/recipe/recipe-dev.ttl" ;
     form:autoCompleteQuery """
@@ -43,13 +36,14 @@ recipeForm:category
     """ ;
     form:order       2 .
 
-recipeForm:recipe
+recipeForm:instructions
     form:fieldWidget  "textarea" ;
-    rdfs:label        "Recipe"@en ;
-    rdfs:label        "Recept"@nl ;
-    form:binding      recipe:content ;
+    rdfs:label        "Instructions"@en ;
+    rdfs:label        "Instructies"@nl ;
+    form:binding      recipe:instructions ;
     form:rows         6 ;
     form:order        3 ;
+    form:multiple true ;
     form:translatable true ;
     form:required     true .
 
