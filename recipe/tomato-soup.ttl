@@ -1,0 +1,18 @@
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prayer:  <http://rdf.danielbeeke.nl/prayer/prayer-dev.ttl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix recipe:  <http://purl.org/arecipe/> .
+
+<>
+    a                   recipe:Recipe ;
+    recipe:fn           "Tomato soup"@en ;
+    recipe:instructions """
+    Peel the tomato's, the garlic and the unions.
+    """@en ;
+    recipe:duration     "PT1H30M" ;
+    recipe:tag          "Soup" ;
+    recipe:author       <http://danielbeeke.nl/foaf.ttl#me> ;
+    recipe:ingredient   <http://dbpedia.org/resource/Tomato>, <http://dbpedia.org/resource/Tomato_sauce>,
+                        <http://dbpedia.org/resource/Oregano> ;
+    recipe:summary      "Tomato soup, nice and warm." .
