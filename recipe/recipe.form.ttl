@@ -22,7 +22,7 @@ recipeForm:ingredient
     rdfs:label       "Ingrediënten"@nl ;
     form:binding     recipe:ingredient ;
     form:multiple    true ;
-    form:autoCompleteSource "http://localhost:3000/search=SEARCH_TERM" ;
+    form:autoCompleteSource "http://localhost:3000/search/SEARCH_TERM.jsonld" ;
     form:autoCompleteQuery """
     PREFIX rdfs:       <http://www.w3.org/2000/01/rdf-schema#>
 
