@@ -22,16 +22,12 @@ recipeForm:ingredient
     rdfs:label       "Ingrediënten"@nl ;
     form:binding     recipe:ingredient ;
     form:multiple    true ;
-    form:autoCompleteSource "http://rdf.danielbeeke.nl/recipe/recipe-dev.ttl" ;
+    form:autoCompleteSource "http://localhost:3000/search=SEARCH_TERM" ;
     form:autoCompleteQuery """
-    PREFIX recipe:     <http://rdf.danielbeeke.nl/recipe/recipe-dev.ttl#>
     PREFIX rdfs:       <http://www.w3.org/2000/01/rdf-schema#>
 
     SELECT ?label ?uri {
-        ?uri rdfs:subClassOf recipe:Recipe .
-        ?uri rdfs:label ?label
-
-       FILTER (lang(?label) = 'LANGUAGE')
+        ?uri rdfs:label ?label .
     }
     """ ;
     form:order       2 .
