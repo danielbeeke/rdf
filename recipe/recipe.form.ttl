@@ -25,11 +25,13 @@ recipeForm:ingredient
     form:autoCompleteSource "http://localhost:3000/search/SEARCH_TERM" ;
     form:autoCompleteQuery """
     PREFIX rdfs:       <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX schema:       <http://schema.org/>
 
-    SELECT ?label ?uri {
+    SELECT ?label ?uri ?image {
         ?uri rdfs:label ?label .
+        ?uri schema:image ?image .
     }
-    """ ;
+    LIMIT 10    """ ;
     form:order       2 .
 
 recipeForm:instructions
