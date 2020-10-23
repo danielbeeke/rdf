@@ -77,6 +77,16 @@ form:autoCompleteQuery
     rdfs:comment "Sparql query for autocomplete suggestions"@en ;
     rdfs:label   "Query"@en .
 
+form:optionsSource
+    rdf:type     rdf:Property ;
+    rdfs:comment "A source of options"@en ;
+    rdfs:label   "Options source"@en .
+
+form:optionsQuery
+    rdf:type     rdf:Property ;
+    rdfs:comment "Sparql query for options"@en ;
+    rdfs:label   "Query"@en .
+
 form:subject
     rdf:type     rdf:Property ;
     rdfs:comment "If you use this property, the form builder should use the value of this field as the name of the subject that is created"@en ;
