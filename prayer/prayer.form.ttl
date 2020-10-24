@@ -28,7 +28,7 @@ prayerForm:category
     rdfs:label       "Category"@en ;
     rdfs:label       "Categorie"@nl ;
     form:binding     prayer:category ;
-    form:multiple    true ;
+    form:required     true ;
     form:optionsSource "http://rdf.danielbeeke.nl/prayer/prayer-dev.ttl" ;
     form:optionsQuery """
     PREFIX prayer:     <http://rdf.danielbeeke.nl/prayer/prayer-dev.ttl#>
