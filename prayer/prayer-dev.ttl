@@ -60,15 +60,18 @@ prayer:originalLanguage
 
 prayer:MorningPrayer
     rdfs:label   "Morning prayer"@en ;
+    rdfs:label   "Ochtend gebed"@nl ;
     rdfs:comment "A Christian prayer usually prayed in the morning."@en ;
     rdfs:subClassOf prayer:Prayer .
 
 prayer:EveningPrayer
     rdfs:label   "Evening prayer"@en ;
+    rdfs:label   "Avond gebed"@nl ;
     rdfs:comment "A Christian prayer usually prayed in the evening."@en ;
     rdfs:subClassOf prayer:Prayer .
 
 prayer:MealPrayer
     rdfs:label   "Meal prayer"@en ;
+    rdfs:label   "Maaltijd gebed"@nl ;
     rdfs:comment "A Christian prayer usually prayed before or after a meal."@en ;
     rdfs:subClassOf prayer:Prayer .
