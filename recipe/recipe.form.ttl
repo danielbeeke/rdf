@@ -30,7 +30,7 @@ recipeForm:ingredient
 
     SELECT DISTINCT ?uri ?label ?image {
 
-      ?o dbo:ingredient ?uri
+      ?o dbo:ingredient ?uri .
       ?uri rdfs:label ?label .
       ?uri dbo:thumbnail ?image .
       ?label bif:contains "SEARCH_TERM"@LANGUAGE .
