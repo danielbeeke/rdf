@@ -82,6 +82,11 @@ form:optionsSource
     rdfs:comment "A source of options"@en ;
     rdfs:label   "Options source"@en .
 
+form:emptyText
+    rdf:type     rdf:Property ;
+    rdfs:comment "The text to display when the field is empty"@en ;
+    rdfs:label   "Empty text"@en .
+
 form:optionsQuery
     rdf:type     rdf:Property ;
     rdfs:comment "Sparql query for options"@en ;
