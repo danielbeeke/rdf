@@ -22,16 +22,25 @@ recipeForm:ingredient
     rdfs:label       "Ingrediënten"@nl ;
     form:binding     recipe:ingredient ;
     form:multiple    true ;
-    form:autoCompleteSource "http://localhost:3000/search/SEARCH_TERM" ;
     form:autoCompleteQuery """
-    PREFIX rdfs:       <http://www.w3.org/2000/01/rdf-schema#>
-    PREFIX schema:       <http://schema.org/>
 
-    SELECT ?label ?uri ?image {
-        ?uri rdfs:label ?label .
-        ?uri schema:image ?image .
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX dbo:  <http://dbpedia.org/ontology/>
+    PREFIX bif: <bif:>
+
+    SELECT DISTINCT ?uri ?label ?image {
+
+      ?o dbo:ingredient ?uri
+      ?uri rdfs:label ?label .
+      ?uri dbo:thumbnail ?image .
+      ?label bif:contains "SEARCH_TERM"@LANGUAGE .
+
+      filter langMatches(lang(?label), "LANGUAGE")
     }
-    LIMIT 10    """ ;
+
+    LIMIT 10
+
+    """ ;
     form:order       2 .
 
 recipeForm:instructions
