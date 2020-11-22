@@ -32,8 +32,6 @@ prayerForm:category
     SELECT ?label ?uri {
         ?uri rdfs:subClassOf prayer:Prayer .
         ?uri rdfs:label ?label
-
-       FILTER (lang(?label) = 'LANGUAGE')
     }
     """ ;
     form:order       2 .
