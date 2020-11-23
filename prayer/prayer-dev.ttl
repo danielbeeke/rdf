@@ -75,3 +75,33 @@ prayer:MealPrayer
     rdfs:label   "Maaltijd gebed"@nl ;
     rdfs:comment "A Christian prayer usually prayed before or after a meal."@en ;
     rdfs:subClassOf prayer:Prayer .
+
+prayer:PrayersFromTheBible
+    rdfs:label   "Prayers from the bible"@en ;
+    rdfs:label   "Gebeden uit de bijbel"@nl ;
+    rdfs:comment "A Christian prayer that exists in the bible."@en ;
+    rdfs:subClassOf prayer:Prayer .
+
+prayer:OpeningPrayer
+    rdfs:label   "Opening prayer"@en ;
+    rdfs:label   "Openingsgebed"@nl ;
+    rdfs:comment "A Christian prayer to open up a prayer time."@en ;
+    rdfs:subClassOf prayer:Prayer .
+
+prayer:ConfessionPrayer
+    rdfs:label   "Confession prayer"@en ;
+    rdfs:label   "Belijdenis"@nl ;
+    rdfs:comment "A Christian prayer about confession."@en ;
+    rdfs:subClassOf prayer:Prayer .
+
+prayer:AveMaria
+    rdfs:label   "Ave Maria"@en ;
+    rdfs:label   "Ave Maria"@nl ;
+    rdfs:comment "A Christian prayer about Maria."@en ;
+    rdfs:subClassOf prayer:Prayer .
+
+prayer:ChurchFathersPrayer
+    rdfs:label   "Church Father prayer"@en ;
+    rdfs:label   "Gebed van een kerkvader"@nl ;
+    rdfs:comment "An old Christian prayer written by a church father."@en ;
+    rdfs:subClassOf prayer:Prayer .
