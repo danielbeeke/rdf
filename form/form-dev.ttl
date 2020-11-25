@@ -15,82 +15,77 @@ form:
 form:Form
     a            rdfs:Class ;
     rdfs:label   "Form"@en ;
-    rdfs:comment "A form definition for an owl class."@en .
+    rdfs:comment "A form definition for an owl class. Use https://github.com/danielbeeke/rdf-form to render the form or to read documentation."@en .
 
 form:fieldWidget
     rdf:type     rdf:Property ;
-    rdfs:comment "The field widget"@en ;
+    rdfs:comment "The field widget, the widget that will be displayed. It may be a dropdown, radios, a map to select a location or something else. You can also implement your own."@en ;
     rdfs:label   "Field widget"@en .
 
 form:order
     rdf:type     rdf:Property ;
-    rdfs:comment "The position of the field in the form"@en ;
+    rdfs:comment "The position of the field in the form. This will be used to sort the fields. No order means 0."@en ;
     rdfs:label   "Order"@en .
 
 form:required
     rdf:type     rdf:Property ;
-    rdfs:comment "The minimum items that are required or true for single fields"@en ;
+    rdfs:comment "The minimum items that are required or true for single fields. So you can give a boolean or a number."@en ;
     rdfs:label   "Required"@en .
 
 form:multiple
     rdf:type     rdf:Property ;
-    rdfs:comment "This field may have multiple items"@en ;
+    rdfs:comment "This field may have multiple items."@en ;
     rdfs:label   "Multiple"@en .
 
 form:disabled
     rdf:type     rdf:Property ;
-    rdfs:comment "This field is disabled"@en ;
+    rdfs:comment "This field is disabled."@en ;
     rdfs:label   "Disabled"@en .
 
 form:rows
     rdf:type     rdf:Property ;
-    rdfs:comment "The rows for a textarea"@en ;
+    rdfs:comment "The number of rows for a textarea. This is mapped directly to the html rows attribute."@en ;
     rdfs:label   "Rows"@en .
-
-form:disabled
-    rdf:type     rdf:Property ;
-    rdfs:comment "This field is disabled"@en ;
-    rdfs:label   "Disabled"@en .
 
 form:binding
     rdf:type     rdf:Property ;
-    rdfs:comment "The predicate(s) this field maps to"@en ;
+    rdfs:comment "The predicate(s) this field maps to. Some widgets have multiple bindings, like a geo location or an address field. Just supply them all."@en ;
     rdfs:label   "Binding(s)"@en .
 
 form:input
     rdf:type     rdf:Property ;
-    rdfs:comment "The input for the subject field"@en ;
+    rdfs:comment "The input for the subject field. This is only used in combination with the subject field to auto generate a slug for the subject."@en ;
     rdfs:label   "Subject input"@en .
 
 form:translatable
     rdf:type     rdf:Property ;
-    rdfs:comment "If the field is translatable"@en ;
+    rdfs:comment "If the field is translatable. THis will allow translations. It will start untranslated, but the user may add translations."@en ;
     rdfs:label   "Translatable"@en .
 
 form:autoCompleteSource
     rdf:type     rdf:Property ;
-    rdfs:comment "A source of autocomplete suggestions"@en ;
+    rdfs:comment "A Comunica source for the autocomplete suggestions query. See https://comunica.dev/docs/query/advanced/source_types/."@en ;
     rdfs:label   "Autocomplete source"@en .
 
 form:autoCompleteQuery
     rdf:type     rdf:Property ;
-    rdfs:comment "Sparql query for autocomplete suggestions"@en ;
-    rdfs:label   "Query"@en .
+    rdfs:comment "Sparql query for autocomplete suggestions. Comunica is used to query. See https://comunica.dev."@en ;
+    rdfs:label   "Autocomplete query"@en .
 
 form:optionsSource
     rdf:type     rdf:Property ;
-    rdfs:comment "A source of options"@en ;
+    rdfs:comment "A Comunica source for the options query. See https://comunica.dev/docs/query/advanced/source_types/."@en ;
     rdfs:label   "Options source"@en .
-
-form:emptyText
-    rdf:type     rdf:Property ;
-    rdfs:comment "The text to display when the field is empty"@en ;
-    rdfs:label   "Empty text"@en .
 
 form:optionsQuery
     rdf:type     rdf:Property ;
-    rdfs:comment "Sparql query for options"@en ;
-    rdfs:label   "Query"@en .
+    rdfs:comment "Sparql query for options. Comunica is used to query. See https://comunica.dev."@en ;
+    rdfs:label   "Options query"@en .
+
+form:emptyText
+    rdf:type     rdf:Property ;
+    rdfs:comment "The text to display when the field is empty. THis is used for the first option of a dropdown field."@en ;
+    rdfs:label   "Empty text"@en .
 
 form:subject
     rdf:type     rdf:Property ;
