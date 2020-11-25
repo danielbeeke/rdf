@@ -33,7 +33,7 @@ recipeForm:ingredient
       ?o dbo:ingredient ?uri .
       ?uri rdfs:label ?label .
       ?uri dbo:thumbnail ?image .
-      ?label bif:contains "SEARCH_TERM"@LANGUAGE .
+      ?label bif:contains "'SEARCH_TERM'" .
 
       filter langMatches(lang(?label), "LANGUAGE")
     }
