@@ -15,7 +15,7 @@ form:
 form:Form
     a            rdfs:Class ;
     rdfs:label   "Form"@en ;
-    rdfs:comment "A form definition for an owl class. Use https://github.com/danielbeeke/rdf-form to render the form or to read documentation."@en .
+    rdfs:comment "A form definition for an owl class. Use [RDF-form](https://github.com/danielbeeke/rdf-form) to render the form or to read documentation."@en .
 
 form:fieldWidget
     rdf:type     rdf:Property ;
@@ -59,32 +59,32 @@ form:input
 
 form:translatable
     rdf:type     rdf:Property ;
-    rdfs:comment "If the field is translatable. THis will allow translations. It will start untranslated, but the user may add translations."@en ;
+    rdfs:comment "If the field is translatable. This will allow translations. It will start untranslated, but the user may add translations."@en ;
     rdfs:label   "Translatable"@en .
 
 form:autoCompleteSource
     rdf:type     rdf:Property ;
-    rdfs:comment "A Comunica source for the autocomplete suggestions query. See https://comunica.dev/docs/query/advanced/source_types/."@en ;
+    rdfs:comment "A Comunica source for the autocomplete suggestions query. See [Comunica source types](https://comunica.dev/docs/query/advanced/source_types/)."@en ;
     rdfs:label   "Autocomplete source"@en .
 
 form:autoCompleteQuery
     rdf:type     rdf:Property ;
-    rdfs:comment "Sparql query for autocomplete suggestions. Comunica is used to query. See https://comunica.dev."@en ;
+    rdfs:comment "Sparql query for autocomplete suggestions. Comunica is used to query. See [Comunica](https://comunica.dev)."@en ;
     rdfs:label   "Autocomplete query"@en .
 
 form:optionsSource
     rdf:type     rdf:Property ;
-    rdfs:comment "A Comunica source for the options query. See https://comunica.dev/docs/query/advanced/source_types/."@en ;
+    rdfs:comment "A Comunica source for the options query. See [Comunica source types](https://comunica.dev/docs/query/advanced/source_types/)."@en ;
     rdfs:label   "Options source"@en .
 
 form:optionsQuery
     rdf:type     rdf:Property ;
-    rdfs:comment "Sparql query for options. Comunica is used to query. See https://comunica.dev."@en ;
+    rdfs:comment "Sparql query for options. Comunica is used to query. See [Comunica](https://comunica.dev)."@en ;
     rdfs:label   "Options query"@en .
 
 form:emptyText
     rdf:type     rdf:Property ;
-    rdfs:comment "The text to display when the field is empty. THis is used for the first option of a dropdown field."@en ;
+    rdfs:comment "The text to display when the field is empty. This is used for the first option of a dropdown field."@en ;
     rdfs:label   "Empty text"@en .
 
 form:subject
