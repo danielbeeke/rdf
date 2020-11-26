@@ -111,3 +111,9 @@ prayer:MiscellaneousPrayer
     rdfs:label   "Overige gebeden"@nl ;
     rdfs:comment "A Christian prayer in an unknown category."@en ;
     rdfs:subClassOf prayer:Prayer .
+
+prayer:JesusPrayer
+    rdfs:label   "The Jesus prayer"@en ;
+    rdfs:label   "Het Jezus gebed"@nl ;
+    rdfs:comment "A Christian prayer."@en ;
+    rdfs:subClassOf prayer:Prayer .
