@@ -105,3 +105,9 @@ prayer:ChurchFathersPrayer
     rdfs:label   "Gebed van een kerkvader"@nl ;
     rdfs:comment "An old Christian prayer written by a church father."@en ;
     rdfs:subClassOf prayer:Prayer .
+
+prayer:MiscellaneousPrayer
+    rdfs:label   "Miscellaneous prayer"@en ;
+    rdfs:label   "Overige gebeden"@nl ;
+    rdfs:comment "A Christian prayer in an unknown category."@en ;
+    rdfs:subClassOf prayer:Prayer .
