@@ -87,6 +87,11 @@ form:emptyText
     rdfs:comment "The text to display when the field is empty. This is used for the first option of a dropdown field."@en ;
     rdfs:label   "Empty text"@en .
 
+form:description
+    rdf:type     rdf:Property ;
+    rdfs:comment "The text to display below the field."@en ;
+    rdfs:label   "Description text"@en .
+
 form:placeholder
     rdf:type     rdf:Property ;
     rdfs:comment "The text to display when the text field is empty as a placeholder."@en ;
