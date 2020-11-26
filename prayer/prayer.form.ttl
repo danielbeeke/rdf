@@ -21,8 +21,6 @@ prayerForm:category
     rdfs:label       "Category"@en ;
     rdfs:label       "Categorie"@nl ;
     form:binding     prayer:category ;
-    form:description "This field does not yet have a great autocomplete query, so not all ingredients of dbpedia are findable."@en ;
-    form:description "De query voor de autocomplete suggesties is nog neit erg goed. Het is dus nog niet mogelijke om alle ingredienten van dbpedia te zoeken."@nl ;
     form:required     true ;
     form:emptyText  "- Pick a prayer category -"@en ;
     form:emptyText  "- Selecteer een gebedscategorie -"@nl ;
