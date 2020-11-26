@@ -11,6 +11,6 @@
     recipe:duration     "PT1H30M" ;
     recipe:tag          "Soup" ;
     recipe:author       <https://danielbeeke.nl/foaf.ttl#this> ;
-    recipe:ingredient   <https://dbpedia.org/resource/Tomato>, <https://dbpedia.org/resource/Tomato_sauce>,
-                        <https://dbpedia.org/resource/Oregano>, <https://dbpedia.org/resource/Garlic> ;
+    recipe:ingredient   <http://dbpedia.org/resource/Tomato>, <http://dbpedia.org/resource/Tomato_sauce>,
+                        <http://dbpedia.org/resource/Oregano>, <http://dbpedia.org/resource/Garlic> ;
     recipe:summary      "Tomato soup, nice and warm." .
