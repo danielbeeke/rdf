@@ -9,8 +9,8 @@
 
 prayerForm:title
     form:fieldWidget  "string" ;
-    rdfs:label        "Title"@en ;
-    rdfs:label        "Titel"@nl ;
+    form:label        "Title"@en ;
+    form:label        "Titel"@nl ;
     form:binding      prayer:title ;
     form:order        1 ;
     form:translatable true ;
@@ -18,8 +18,8 @@ prayerForm:title
 
 prayerForm:category
     form:fieldWidget "dropdown" ;
-    rdfs:label       "Category"@en ;
-    rdfs:label       "Categorie"@nl ;
+    form:label       "Category"@en ;
+    form:label       "Categorie"@nl ;
     form:binding     prayer:category ;
     form:required     true ;
     form:emptyText  "- Pick a prayer category -"@en ;
@@ -38,8 +38,8 @@ prayerForm:category
 
 prayerForm:prayer
     form:fieldWidget  "textarea" ;
-    rdfs:label        "Prayer"@en ;
-    rdfs:label        "Gebed"@nl ;
+    form:label        "Prayer"@en ;
+    form:label        "Gebed"@nl ;
     form:binding      prayer:content ;
     form:rows         6 ;
     form:order        3 ;
@@ -48,7 +48,7 @@ prayerForm:prayer
 
 prayerForm:author
     form:fieldWidget "reference" ;
-    rdfs:label       "Author"@en ;
-    rdfs:label       "Auteur"@nl ;
+    form:label       "Author"@en ;
+    form:label       "Auteur"@nl ;
     form:binding     prayer:author ;
     form:order       4 .

@@ -17,6 +17,11 @@ form:Form
     rdfs:label   "Form"@en ;
     rdfs:comment "A form definition for an owl class. Use [RDF-form](https://github.com/danielbeeke/rdf-form) to render the form or to read documentation."@en .
 
+form:label
+    rdf:type     rdf:Property ;
+    rdfs:comment "The label to display above the field."@en ;
+    rdfs:label   "Label text"@en .
+
 form:fieldWidget
     rdf:type     rdf:Property ;
     rdfs:comment "The field widget, the widget that will be displayed. It may be a dropdown, radios, a map to select a location or something else. You can also implement your own."@en ;

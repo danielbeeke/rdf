@@ -9,8 +9,8 @@
 
 recipeForm:fn
     form:fieldWidget  "string" ;
-    rdfs:label        "Title"@en ;
-    rdfs:label        "Titel"@nl ;
+    form:label        "Title"@en ;
+    form:label        "Titel"@nl ;
     form:binding      recipe:fn ;
     form:order        1 ;
     form:translatable true ;
@@ -18,8 +18,8 @@ recipeForm:fn
 
 recipeForm:ingredient
     form:fieldWidget "reference" ;
-    rdfs:label       "Ingredients"@en ;
-    rdfs:label       "Ingrediënten"@nl ;
+    form:label       "Ingredients"@en ;
+    form:label       "Ingrediënten"@nl ;
     form:binding     recipe:ingredient ;
     form:multiple    true ;
     form:description "This field does not yet have a great autocomplete query, so not all ingredients of dbpedia are findable."@en ;
@@ -49,8 +49,8 @@ recipeForm:ingredient
 
 recipeForm:instructions
     form:fieldWidget  "textarea" ;
-    rdfs:label        "Instructions"@en ;
-    rdfs:label        "Instructies"@nl ;
+    form:label        "Instructions"@en ;
+    form:label        "Instructies"@nl ;
     form:binding      recipe:instructions ;
     form:rows         6 ;
     form:order        3 ;
@@ -60,7 +60,7 @@ recipeForm:instructions
 
 recipeForm:author
     form:fieldWidget "reference" ;
-    rdfs:label       "Author"@en ;
-    rdfs:label       "Auteur"@nl ;
+    form:label       "Author"@en ;
+    form:label       "Auteur"@nl ;
     form:binding     recipe:author ;
     form:order       4 .
