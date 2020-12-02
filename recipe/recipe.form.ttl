@@ -58,9 +58,19 @@ recipeForm:instructions
     form:translatable true ;
     form:required     true .
 
+
+recipeForm:duration
+    form:fieldWidget  "duration" ;
+    form:label        "Duration"@en ;
+    form:label        "Tijdsduur"@nl ;
+    form:binding      recipe:duration ;
+    form:order        4 ;
+    form:required     true .
+
+
 recipeForm:author
     form:fieldWidget "reference" ;
     form:label       "Author"@en ;
     form:label       "Auteur"@nl ;
     form:binding     recipe:author ;
-    form:order       4 .
+    form:order       5 .
