@@ -111,3 +111,8 @@ form:subject
     rdf:type     rdf:Property ;
     rdfs:comment "If you use this property, the form builder should use the value of this field as the name of the subject that is created"@en ;
     rdfs:label   "Subject creator"@en .
+
+form:fieldGroup
+    rdf:type     rdf:Property ;
+    rdfs:comment "Place fields within this type to have a nested field group that may be repeated."@en ;
+    rdfs:label   "Field group"@en .
