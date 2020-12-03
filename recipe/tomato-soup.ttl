@@ -7,7 +7,7 @@
 <>
     a                   recipe:Recipe ;
     recipe:fn           "Tomato soup"@en ;
-    recipe:instructions """Peel the tomato's, the garlic and the unions."""@en ;
+    recipe:instructions """Peel the tomato's, the garlic and the onions."""@en ;
     recipe:duration     "PT1H30M" ;
     recipe:tag          "Soup" ;
     recipe:author       <https://danielbeeke.nl/foaf.ttl#this> ;
