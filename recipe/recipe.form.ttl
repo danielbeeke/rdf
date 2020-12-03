@@ -17,15 +17,17 @@ recipeForm:fn
     form:required     true .
 
 recipeForm:ingredient
-    form:fieldWidget "reference" ;
-    form:label       "Ingredients"@en ;
-    form:label       "Ingrediënten"@nl ;
-    form:binding     recipe:ingredient ;
-    form:multiple    true ;
-    form:description "This field does not yet have a great autocomplete query, so not all ingredients of dbpedia are findable."@en ;
-    form:description "De query voor de autocomplete suggesties is nog niet erg goed. Het is dus nog niet mogelijke om alle ingredienten van dbpedia te zoeken."@nl ;
-    form:placeholder "Search for an ingredient or paste a link of the ingredient."@en ;
-    form:placeholder "Zoek voor een ingredient of plak een link naar een ingredient."@nl ;
+    form:fieldWidget       "reference" ;
+    form:label             "Ingredients"@en ;
+    form:label             "Ingrediënten"@nl ;
+    form:binding           recipe:ingredient ;
+    form:multiple          true ;
+    form:description
+                           "This field does not yet have a great autocomplete query, so not all ingredients of dbpedia are findable."@en ;
+    form:description
+                           "De query voor de autocomplete suggesties is nog niet erg goed. Het is dus nog niet mogelijke om alle ingredienten van dbpedia te zoeken."@nl ;
+    form:placeholder       "Search for an ingredient or paste a link of the ingredient."@en ;
+    form:placeholder       "Zoek voor een ingredient of plak een link naar een ingredient."@nl ;
     form:autoCompleteQuery """
 
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -45,7 +47,7 @@ recipeForm:ingredient
     LIMIT 10
 
     """ ;
-    form:order       2 .
+    form:order             2 .
 
 recipeForm:instructions
     form:fieldWidget  "textarea" ;
@@ -54,19 +56,20 @@ recipeForm:instructions
     form:binding      recipe:instructions ;
     form:rows         6 ;
     form:order        3 ;
-    form:multiple true ;
+    form:multiple     true ;
     form:translatable true ;
     form:required     true .
 
 
 recipeForm:duration
-    form:fieldWidget  "duration" ;
-    form:label        "Duration"@en ;
-    form:label        "Tijdsduur"@nl ;
-    form:binding      recipe:duration ;
-    form:range        "THM" ;
-    form:order        4 ;
-    form:required     true .
+    form:fieldWidget "duration" ;
+    form:label       "Duration"@en ;
+    form:label       "Tijdsduur"@nl ;
+    form:binding     recipe:duration ;
+    form:range       "THM" ;
+    form:order       4 ;
+    form:multiple    false ;
+    form:required    true .
 
 
 recipeForm:author
