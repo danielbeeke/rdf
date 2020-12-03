@@ -20,12 +20,7 @@ recipeForm:ingredients
     form:fieldWidget       "group" ;
     form:label             "Ingredients"@en ;
     form:label             "Ingrediënten"@nl ;
-    form:binding           recipe:ingredient ;
     form:multiple          true ;
-    form:description
-                           "This field does not yet have a great autocomplete query, so not all ingredients of dbpedia are findable."@en ;
-    form:description
-                           "De query voor de autocomplete suggesties is nog niet erg goed. Het is dus nog niet mogelijke om alle ingredienten van dbpedia te zoeken."@nl ;
     form:order             2 .
 
 
