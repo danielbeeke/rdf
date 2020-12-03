@@ -64,7 +64,7 @@ recipeForm:duration
     form:label        "Duration"@en ;
     form:label        "Tijdsduur"@nl ;
     form:binding      recipe:duration ;
-    form:range        "HM" ;
+    form:range        "THM" ;
     form:order        4 ;
     form:required     true .
 
