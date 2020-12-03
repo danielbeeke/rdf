@@ -17,15 +17,16 @@ recipeForm:fn
     form:required     true .
 
 recipeForm:ingredients
-    form:fieldWidget       "group" ;
-    form:label             "Ingredients"@en ;
-    form:label             "Ingrediënten"@nl ;
-    form:multiple          true ;
-    form:order             2 .
+    form:fieldWidget "group" ;
+    form:label       "Ingredients"@en ;
+    form:label       "Ingrediënten"@nl ;
+    form:binding     recipe:ingredients ;
+    form:multiple    true ;
+    form:order       2 .
 
 
 recipeForm:ingredient
-                           form:fieldWidget       "reference" ;
+    form:fieldWidget       "reference" ;
     form:label             "Ingredient"@en ;
     form:label             "Ingrediënt"@nl ;
     form:fieldGroup        "ingredients" ;
@@ -58,7 +59,17 @@ recipeForm:quantity
     form:label       "Quantity"@en ;
     form:label       "Aantal"@nl ;
     form:binding     recipe:quantity ;
-    form:fieldGroup        "ingredients" ;
+    form:fieldGroup  "ingredients" ;
+    form:order       2 ;
+    form:required    true .
+
+
+recipeForm:measurementUnit
+    form:fieldWidget "string" ;
+    form:label       "Unit"@en ;
+    form:label       "Soort"@nl ;
+    form:binding     recipe:measurementUnit ;
+    form:fieldGroup  "ingredients" ;
     form:order       2 ;
     form:required    true .
 
