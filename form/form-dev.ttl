@@ -47,6 +47,11 @@ form:disabled
     rdfs:comment "This field is disabled."@en ;
     rdfs:label   "Disabled"@en .
 
+form:range
+    rdf:type     rdf:Property ;
+    rdfs:comment "You can use this for the duration field. Use any of the letters from the ISO-8601. PYMDTHMS"@en ;
+    rdfs:label   "Disabled"@en .
+
 form:rows
     rdf:type     rdf:Property ;
     rdfs:comment "The number of rows for a textarea. This is mapped directly to the html rows attribute."@en ;
