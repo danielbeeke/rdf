@@ -116,3 +116,13 @@ form:fieldGroup
     rdf:type     rdf:Property ;
     rdfs:comment "Place fields within this type to have a nested field group that may be repeated."@en ;
     rdfs:label   "Field group"@en .
+
+form:value
+    rdf:type     rdf:Property ;
+    rdfs:comment "Used for option list values."@en ;
+    rdfs:label   "Value"@en .
+
+form:option
+    rdf:type     rdf:Property ;
+    rdfs:comment "Used for option list values."@en ;
+    rdfs:label   "Option"@en .

@@ -65,10 +65,16 @@ recipeForm:quantity
 
 
 recipeForm:measurementUnit
-    form:fieldWidget "string" ;
+    form:fieldWidget "dropdown" ;
     form:label       "Unit"@en ;
     form:label       "Soort"@nl ;
     form:binding     recipe:measurementUnit ;
+    form:option      [ form:label "Litre"@en ;
+                       form:label "Liter"@nl ;
+                       form:value <https://www.wikidata.org/wiki/Q11582> ; ] ;
+    form:option      [ form:label "Millilitre"@en ;
+                       form:label "Milliliter"@nl ;
+                       form:value <https://www.wikidata.org/wiki/Q2332346> ; ] ;
     form:fieldGroup  "ingredients" ;
     form:order       2 ;
     form:required    true .
