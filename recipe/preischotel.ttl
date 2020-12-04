@@ -24,7 +24,7 @@
     recipe:ingredients [ recipe:ingredient      <http://dbpedia.org/resource/Oregano> ;
                          recipe:measurementUnit "Theespoon" ;
                          recipe:quantity        2 ; ] ;
-    recipe:ingredients [ recipe:ingredient      <http://dbpedia.org/resource/Oregano> ;
+    recipe:ingredients [ recipe:ingredient      <http://dbpedia.org/resource/Garlic> ;
                          recipe:measurementUnit "Items" ;
                          recipe:quantity        2 ; ] ;
     recipe:summary     "Tomato soup, nice and warm." .
