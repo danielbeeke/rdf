@@ -16,15 +16,15 @@
     recipe:tag         "Meat" ;
     recipe:author      <https://danielbeeke.nl/foaf.ttl#this> ;
     recipe:ingredients [ recipe:ingredient      <http://dbpedia.org/resource/Tomato> ;
-                         recipe:measurementUnit "kg" ;
+                         recipe:measurementUnit <https://www.wikidata.org/wiki/Q11582> ;
                          recipe:quantity        1 ; ] ;
     recipe:ingredients [ recipe:ingredient      <http://dbpedia.org/resource/Tomato_sauce> ;
-                         recipe:measurementUnit "ml" ;
+                         recipe:measurementUnit <https://www.wikidata.org/wiki/Q11582> ;
                          recipe:quantity        350 ; ] ;
     recipe:ingredients [ recipe:ingredient      <http://dbpedia.org/resource/Oregano> ;
-                         recipe:measurementUnit "Theespoon" ;
+                         recipe:measurementUnit <https://www.wikidata.org/wiki/Q2332346>  ;
                          recipe:quantity        2 ; ] ;
     recipe:ingredients [ recipe:ingredient      <http://dbpedia.org/resource/Garlic> ;
-                         recipe:measurementUnit "Items" ;
+                         recipe:measurementUnit <https://www.wikidata.org/wiki/Q2332346>  ;
                          recipe:quantity        2 ; ] ;
     recipe:summary     "Tomato soup, nice and warm." .
