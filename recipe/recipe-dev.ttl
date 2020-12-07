@@ -35,25 +35,33 @@ recipe:title
     rdfs:label   "Recipe title"@en ;
     owl:sameAs   rdfs:label .
 
-recipe:content
+recipe:ingredients
+    rdf:type     rdf:Property ;
+    rdfs:comment "The ingredients of the recipe."@en ;
+    rdfs:label   "Ingredients"@en .
+
+recipe:ingredient
+    rdf:type     rdf:Property ;
+    rdfs:comment "The ingredient of an ingredients group inside the ingredients."@en ;
+    rdfs:label   "Ingredient"@en .
+
+recipe:quantity
+    rdf:type     rdf:Property ;
+    rdfs:comment "The quantity of an ingredients group inside the ingredients."@en ;
+    rdfs:label   "Quantity"@en .
+
+recipe:measurementUnit
+    rdf:type     rdf:Property ;
+    rdfs:comment "The unit of an ingredients group inside the ingredients."@en ;
+    rdfs:label   "Unit"@en .
+
+recipe:instructions
     rdf:type     rdf:Property ;
     rdfs:comment "The recipe text itself."@en ;
     rdfs:label   "Recipe text"@en ;
     owl:sameAs   schema:text .
 
-recipe:category
+recipe:duration
     rdf:type     rdf:Property ;
-    rdfs:comment "The category of the recipe."@en ;
-    rdfs:label   "Category"@en .
-
-recipe:dateCreated
-    rdf:type     rdf:Property ;
-    rdfs:comment "The creation date of the recipe."@en ;
-    rdfs:label   "Creation date"@en ;
-    owl:sameAs   schema:dateCreated .
-
-recipe:originalLanguage
-    rdf:type     rdf:Property ;
-    rdfs:comment "The language the recipe was first prayed in."@en ;
-    rdfs:label   "Original language"@en ;
-    owl:sameAs   schema:inLanguage .
+    rdfs:comment "The duration of the recipe."@en ;
+    rdfs:label   "Duration"@en .
