@@ -2,18 +2,16 @@
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix prayer:  <http://rdf.danielbeeke.nl/prayer/prayer-dev.ttl#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix recipe:  <http://purl.org/arecipe/> .
+@prefix recipe:     <http://rdf.danielbeeke.nl/recipe/recipe-dev.ttl#> .
 
 <>
     a                  recipe:Recipe ;
-    recipe:fn          "Makkelijke aardappel-preischotel"@nl ;
+    recipe:title          "Makkelijke aardappel-preischotel"@nl ;
     recipe:instructions
                        """Verwarm de oven voor op 180 °C. Verhit ⅔ van de olie in een koekenpan en bak de prei 10 min op middelhoog vuur. Verhit de rest van de olie in een andere koekenpan en bak het gehakt met de kruiden 8 min. op middelhoog vuur krokant. Meng het gehakt met de prei en verdeel het mengsel over de ovenschaal."""@nl ;
     recipe:instructions
                        """Roer de puree los en verdeel over het gehakt. Rasp de belegen kaas grof over de puree. Bak de ovenschotel in het midden van de oven in 25 min. goudgeel en gaar. Zet de laatste 5 min. de ovengrill aan."""@nl ;
     recipe:duration    "PT20M" ;
-    recipe:tag         "Oven" ;
-    recipe:tag         "Meat" ;
     recipe:author      <https://danielbeeke.nl/foaf.ttl#this> ;
     recipe:ingredients [ recipe:ingredient      <http://dbpedia.org/resource/Tomato> ;
                          recipe:measurementUnit <https://www.wikidata.org/wiki/Q11582> ;
@@ -26,5 +24,4 @@
                          recipe:quantity        2 ; ] ;
     recipe:ingredients [ recipe:ingredient      <http://dbpedia.org/resource/Garlic> ;
                          recipe:measurementUnit <https://www.wikidata.org/wiki/Q2332346>  ;
-                         recipe:quantity        2 ; ] ;
-    recipe:summary     "Tomato soup, nice and warm." .
+                         recipe:quantity        2 ; ] .
