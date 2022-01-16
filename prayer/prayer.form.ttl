@@ -13,7 +13,7 @@ prayerForm:
     a            form:Form .
     
 prayerForm:title
-    form:fieldWidget  "string" ;
+    form:widget  "string" ;
     form:label        "Title"@en ;
     form:label        "Titel"@nl ;
     form:binding      prayer:title ;
@@ -23,7 +23,7 @@ prayerForm:title
 
 prayerForm:category
     a                 form:Field ;
-    form:fieldWidget "dropdown" ;
+    form:widget "dropdown" ;
     form:label       "Category"@en ;
     form:label       "Categorie"@nl ;
     form:binding     prayer:category ;
@@ -44,7 +44,7 @@ prayerForm:category
 
 prayerForm:prayer
     a                 form:Field ;
-    form:fieldWidget  "textarea" ;
+    form:widget  "textarea" ;
     form:label        "Prayer"@en ;
     form:label        "Gebed"@nl ;
     form:binding      prayer:content ;
@@ -55,7 +55,7 @@ prayerForm:prayer
 
 prayerForm:author
     a                 form:Field ;
-    form:fieldWidget "reference" ;
+    form:widget "reference" ;
     form:label       "Author"@en ;
     form:label       "Auteur"@nl ;
     form:binding     prayer:author ;
