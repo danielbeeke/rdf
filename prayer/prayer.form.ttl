@@ -13,6 +13,7 @@ prayerForm:
     a            form:Form .
     
 prayerForm:title
+    a                 form:Field ;
     form:widget  "string" ;
     form:label        "Title"@en ;
     form:label        "Titel"@nl ;
