@@ -7,6 +7,11 @@
 @prefix form:       <http://rdf.danielbeeke.nl/form/form-dev.ttl#> .
 @prefix prayerForm: <http://rdf.danielbeeke.nl/prayer/prayer.form.ttl#> .
 
+prayerForm:
+    form:binding prayer:Prayer ;
+    form:label       "Prayer"@en ;
+    a            form:Form .
+    
 prayerForm:title
     form:fieldWidget  "string" ;
     form:label        "Title"@en ;
@@ -17,6 +22,7 @@ prayerForm:title
     form:required     true .
 
 prayerForm:category
+    a                 form:Field ;
     form:fieldWidget "dropdown" ;
     form:label       "Category"@en ;
     form:label       "Categorie"@nl ;
@@ -37,6 +43,7 @@ prayerForm:category
     form:order       2 .
 
 prayerForm:prayer
+    a                 form:Field ;
     form:fieldWidget  "textarea" ;
     form:label        "Prayer"@en ;
     form:label        "Gebed"@nl ;
@@ -47,6 +54,7 @@ prayerForm:prayer
     form:required     true .
 
 prayerForm:author
+    a                 form:Field ;
     form:fieldWidget "reference" ;
     form:label       "Author"@en ;
     form:label       "Auteur"@nl ;
